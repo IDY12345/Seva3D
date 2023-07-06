@@ -30,15 +30,15 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // template_zlyza2j
+    // template_o76o5qc
 
-    // service_bb5v9uj
+    // service_dxfgm9d
 
-    // R-qQng3fvSwMQj_Xi
+    // pbpafx7ir1g4vWs0K
 
     emailjs.send(
-      'service_bb5v9uj',
-      'template_zlyza2j',
+      'service_dxfgm9d',
+      'template_o76o5qc',
       {
       from_name:form.name,
       to_Name:'Seva Traders',
@@ -46,7 +46,7 @@ const Contact = () => {
       to_email:'sevatraders@gmail.com',
       message:form.message,
       },
-      'R-qQng3fvSwMQj_Xi'
+      'pbpafx7ir1g4vWs0K'
       )
       .then(()=>{
         setLoading(false)
