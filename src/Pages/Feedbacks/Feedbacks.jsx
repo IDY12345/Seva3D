@@ -7,20 +7,24 @@ import {fadeIn,textVariant} from '../../utils/motion';
 
 import  {SectionWrapper}  from '../../hoc'
 
+import DPY from '../../assets/DPY.jpg'
+
+import YPY from '../../assets/YPY.jpg'
+
 const testimonials = [
   {
     testimonial:
       "Working on Seva Traders has been a fulfilling journey that allowed us to pursue our passion for providing top-quality hardware supplies to customers worldwide. As a founder, I am proud of the platform we have built and the positive impact it has made on individuals and businesses. Seeing customers successfully complete their projects with the tools and equipment we offer is incredibly rewarding. We remain dedicated to continuous improvement and innovation, ensuring that Seva Traders remains a trusted destination for all your hardware supply needs",
     name: "Yogesh Yeole",
     designation: "Owner",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: YPY,
   },
   {
     testimonial:
       "When we started Seva Traders, we wanted to create a platform that offers not only a wide range of hardware supplies but also exceptional customer service. As a founder, I am deeply grateful for the trust our customers have placed in us. It is incredibly satisfying to see our vision come to life and witness the positive feedback and success stories from our customers. We are committed to upholding the highest standards of quality, sourcing products from reliable manufacturers, and continuously improving our services. Thank you for choosing Seva Traders as your go-to source for all your hardware needs ",
     name: "Dinesh Yeole",
     designation: "Owner",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: DPY,
   },
 
 ];

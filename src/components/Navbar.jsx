@@ -5,6 +5,10 @@ import {styles} from '../style'
 
 import sevalogo from '../assets/sevalogo.png'
 
+import menu from '../assets/menu.svg'
+
+import close from '../assets/close.svg'
+
 const navLinks = [
   {
     id: "about",
@@ -84,12 +88,12 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          {/* <img
+          <img
             src={toggle ? close : menu}
             alt='menu'
             className='w-[28px] h-[28px] object-contain'
             onClick={() => setToggle(!toggle)}
-          /> */}
+          />
 
           <div
             className={`${

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {Tilt} from 'react-tilt'
 import {motion} from 'framer-motion'
 import { styles } from '../../style'
@@ -9,7 +9,7 @@ import  {SectionWrapper}  from '../../hoc'
 const services = [
   {
     title: "Our Journey",
-    description:"Founded in [Year], Seva Traders was born out of a passion for providing a comprehensive range of hardware supplies to customers across various industries. Our founders recognized the importance of having access to reliable tools and equipment for both professional and personal projects. With this vision in mind, we embarked on a mission to create a platform that offers an extensive selection of high-quality hardware supplies at competitive prices.",
+    description:"Founded in 2003, Seva Traders was born out of a passion for providing a comprehensive range of hardware supplies to customers across various industries. Our founders recognized the importance of having access to reliable tools and equipment for both professional and personal projects. With this vision in mind, we embarked on a mission to create a platform that offers an extensive selection of high-quality hardware supplies at competitive prices.",
     color:"primary"
   },
   {
@@ -35,13 +35,32 @@ const services = [
 ];
 
 const ServiceCard=({index,title,description,color})=>{
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setMobile(true);
+    }
+  }, []);
+  useEffect(() => {
+    const handleSize = () => {
+      if (window.innerWidth <= 768) {
+        setMobile(true);
+      }
+      else {
+        setMobile(false);
+      }
+    };
+    window.addEventListener("resize", handleSize);
+    return () => {
+      window.removeEventListener("resize", handleSize);
+    }
+  }, []);
   return(
-    <Tilt className="xs:w-[1250px] w-full" >
+    <Tilt className={`"max-w-[250px] w-full h-full"`} >
       <motion.div variants={fadeIn("right","spring",0.5*index,0.75)} className='w-full green-pink-gradient p=[1px] rounded-[20px] shadow-card'>
         <div options={{max:45,scale:1,speed:450}} className={`bg-${color} rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center  flex-col`}>
-            {/* <img src='' alt={title} className='w-16 h-16 object-contain' /> */}
             <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-            <p className='text-white text-[19px] '>{description}</p>
+            <p className='text-white text-[19px] '>{`${mobile?"":`${description}`}`}</p>
         </div>
       </motion.div>
     </Tilt>
