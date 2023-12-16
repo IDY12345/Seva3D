@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
         "seva-pattern":"url('/src/assets/blue-black.png')",
+        "seva-pattern1":"url('/src/assets/SevaBack.png')",
       },
     },
   },

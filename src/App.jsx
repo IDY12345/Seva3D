@@ -11,8 +11,8 @@ import Feedbacks from "./Pages/Feedbacks/Feedbacks";
 const App=()=> {
   return (
     <BrowserRouter>
-    <div className="relative z-0 bg-primary">
-      <div className="bg-seva-pattern bg-cover bg-no-repeat bg center">
+    <div className="relative z-0 bg-white">
+      <div className="bg-seva-pattern1 bg-cover bg-no-repeat bg-center bg-fixed">
         <Navbar />
         <Home />
       </div>
