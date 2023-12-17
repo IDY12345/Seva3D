@@ -41,38 +41,48 @@ function Home(sidebar) {
           <div className='text-black'>
             <h1 className={`lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-black`}>Welcome to <span className='blue-text-gradient'>Seva </span></h1>
             {/* <p className={`${styles.heroSubText} mt-2 text-black-100 `}>Your One-Stop Destination <br className='sm:block hidden' />  for Quality Hardware Supplies!</p> */}
-            {mobile ? (<><p className='flex flex-col justify-center items-center'>
-              <p className='font-bold mt-[30px]'>SEVA TRADERS</p>
-              <p className='flex flex-wrap justify-center items-center'>Authorized Distributers of<p className='blue-text-gradient ml-[5px] flex-wrap flex'> Astral Pipes.</p> </p>
-              <img src={astralpipes} alt='pipeppeps' className='h-[150px]' />
-              <p className='font-bold mt-[30px]'>SEVA CERAMICS</p>
-              <p className='flex flex-wrap justify-center items-center'>Authorized Distributers of <p className='blue-text-gradient ml-[5px] flex-wrap flex justify-center items-center flex-col'> Astral BathWare.</p></p>
-              <img src={images} alt='bathware' className='h-[150px]' />
-            </p></>) : (
-              <div className='flex justify-evenly w-full'>
-                <div className='text-[30px] flex flex-col justify-center items-center mt-[100px]'>
-                  <p className='font-bold'>SEVA TRADERS</p>
-                  <p className='flex'>Authorized Distributers of<p className='blue-text-gradient ml-[5px]'> Astral Pipes.</p> </p>
-                  <img src={astralpipes} alt='pipeppeps' className='h-[200px]' />
+            <div className='flex flex-wrap items-center mt-[35px] small:max-tablet:hidden'>
+              <div className='text-[30px] flex flex-col justify-center items-center'>
+                <p className='font-bold'>SEVA TRADERS</p>
+                <div className='flex'>
+                <span>Authorized Distributers of</span>
+                <span className='ml-1 blue-text-gradient'> Astral Pipes.</span>
                 </div>
-                <div className='ml-[150px] text-[30px] flex flex-col justify-center items-center mt-[100px]'>
-                  <p className='font-bold'>SEVA CERAMICS</p>
-                  <p className='flex'>Authorized Distributers of <p className='blue-text-gradient ml-[5px]'> Astral BathWare.</p></p>
-                  <img src={images} alt='bathware' className='h-[200px]' />
-                </div>
+                <img src={astralpipes} alt='' className='h-[200px]'/>
               </div>
-            )}
+              <div className='w-2 sm:h-80 h-40 blue-gradient ml-[45px]' />
+              <div className='text-[30px] flex flex-col justify-center items-center ml-[45px]'>
+                <p className='font-bold'>SEVA CERMAICS</p>
+                <div className='flex justify-center items-center'>
+                <p>Authorized Distributers of</p>
+                <p className='ml-1 blue-text-gradient'> Astral Bathware.</p>
+                </div>
+                <img src={images} alt='' className='h-[200px]'/>
+              </div>
+            </div>
+            <div className='tablet:hidden mt-[100px] flex flex-col justify-center items-center'>
+            <div className='text-[30px] flex flex-col justify-center items-center'>
+                <p className='font-bold'>SEVA TRADERS</p>
+                <div>
+                <span >Authorized Distributers of </span>
+                <p className='ml-1 blue-text-gradient flex flex-col justify-center items-center'>Astral Pipes</p>
+                </div>
+                <img src={astralpipes} alt='' className='h-[100px]'/>
+              </div>
+              {/* <div className='w-[200px] sm:h-5 h-2 blue-gradient ml-[45px]' /> */}
+              <div className='text-[30px] flex flex-col justify-center items-center ml-[45px] mt-[75px]'>
+                <p className='font-bold'>SEVA CERMAICS</p>
+                <div>
+                <span >Authorized Distributers of </span>
+                <p className='ml-1 blue-text-gradient flex flex-col justify-center items-center'>Astral Pipes</p>
+                </div>
+                <img src={images} alt='' className='h-[100px]'/>
+              </div>
+            </div>
           </div>
         </div>
+        
         {/* {mobile?<><img src={sevalogo} className='absolute h-[350px] mt-[350px] ml-[60px]' alt=''/></>:<><PipeCanvas /></>} */}
-
-        {mobile ? <></> : <div className='text-center flex justify-center mt-[280px] absolute items-center ml-[750px]'>
-          <div className='flex flex-col justify-center mt-5'>
-            <div className='w-2 sm:h-80 h-40 blue-gradient ml-2 ' />
-            {/* <div className='w-5 h-5 rounded-full bg-[#2f80ed]' /> */}
-          </div>
-        </div>}
-
         <div className='absolute xs:bottom-00 bottom-1  w-full flex justify-center items-center'>
           <a href='#about'>
             <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
