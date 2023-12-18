@@ -57,7 +57,7 @@ const ServiceCard=({index,title,description,color})=>{
   }, []);
   return(
     <Tilt className={`"max-w-[250px] w-full h-full"`} >
-      <motion.div variants={fadeIn("right","spring",0.5*index,0.75)} className='w-full green-pink-gradient p=[1px] rounded-[20px] shadow-card'>
+      <motion.div variants={fadeIn("right","spring",0.5*index,0.75)} className='w-full blue-black-gradient p=[1px] rounded-[20px] shadow-card'>
         <div options={{max:45,scale:1,speed:450}} className={` rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center  flex-col`}>
             <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
             <p className='text-white text-[19px] '>{`${mobile?"":`${description}`}`}</p>

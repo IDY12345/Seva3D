@@ -57,7 +57,7 @@ const Navbar = () => {
         scrolled ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className='w-full flex justify-around items-center max-w-7xl mx-auto'>
         <Link
           to='/'
           className='flex items-center gap-2'
@@ -66,14 +66,14 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={sevalogo} alt='logo' className='w-20 h-20 object-contain' />
-          <p className='text-black text-[18px] font-bold cursor-pointer flex '>
+          <img src={sevalogo} alt='logo' className='w-20 h-20 object-contain left-0 absolute top-5' />
+          <p className='text-black text-[18px] font-bold cursor-pointer flex left-20 top-12 absolute '>
             Seva Traders &nbsp;
             <span className='sm:block hidden'> | Seva Ceramic</span>
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 mt-7'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
